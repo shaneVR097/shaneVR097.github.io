@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shyantan Kundu's personal portfolio showcasing projects, skills, and accomplishments in Embedded Systems, IoT, and Computer Science.">
     <title>Shyantan Kundu | Embedded Systems & IoT Engineer</title>
     <link rel="stylesheet" href="style2.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Exo+2:wght@600;700&family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Exo+2:wght@600;700&family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Updated Font Awesome -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"> <!-- Updated Lightbox -->
+    <!-- Optional: Devicon CSS for skill icons if not embedding SVGs -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"> -->
 </head>
-<body>
+<body class=""> <!-- Theme class (light-mode/dark-mode) will be added here by JS -->
+
+    <div id="theme-toggle-container">
+        <button id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
 
     <div class="preloader">
         <div class="loader-dots">
@@ -24,10 +35,10 @@
         <div class="container">
             <div class="logo">Shyantan<span class="logo-accent">Kundu</span></div>
             <nav>
-                <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu-list">
                     <i class="fas fa-bars"></i>
                 </button>
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="nav-menu-list">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#objective">Objective</a></li>
                     <li><a href="#education">Education</a></li>
@@ -44,37 +55,37 @@
     <main>
         <section id="hero" class="hero-section">
             <div class="container hero-layout">
-                <div class="hero-content">
+                <div class="hero-content animate-on-scroll slide-in-from-left">
                     <h1 class="animate-on-scroll-parent">
                         <span class="char-animate">S</span><span class="char-animate">h</span><span class="char-animate">y</span><span class="char-animate">a</span><span class="char-animate">n</span><span class="char-animate">t</span><span class="char-animate">a</span><span class="char-animate">n</span>
-                        <span class="char-animate"> </span>
+                        <span class="char-animate"> </span>
                         <span class="char-animate">K</span><span class="char-animate">u</span><span class="char-animate">n</span><span class="char-animate">d</span><span class="char-animate">u</span>
                     </h1>
                     <p class="subtitle animate-on-scroll fade-in-up delay-1">Embedded Systems & IoT Engineer | B.Tech CSE (3rd Year)</p>
                     
                     <div class="hero-key-stats animate-on-scroll fade-in-up delay-2">
-                        <div class="stat-item">
+                        <div class="stat-item animate-on-scroll pop-in">
                             <span class="stat-number-icon"><i class="fas fa-trophy"></i></span>
                             <span class="stat-detail">
                                 <span class="stat-maintext">20+ Awards</span>
                                 <span class="stat-subtext">Incl. National Winners</span>
                             </span>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-item animate-on-scroll pop-in delay-1">
                             <span class="stat-number-icon"><i class="fas fa-microchip"></i></span>
                              <span class="stat-detail">
                                 <span class="stat-maintext">10+ IoT/HW Projects</span>
                                 <span class="stat-subtext">Developed & Ideated</span>
                             </span>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-item animate-on-scroll pop-in delay-2">
                             <span class="stat-number-icon"><i class="fas fa-lightbulb"></i></span>
                             <span class="stat-detail">
                                 <span class="stat-maintext">3 Patents</span>
                                 <span class="stat-subtext">(Pub, Filed, Proc.)</span>
                             </span>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-item animate-on-scroll pop-in delay-3">
                              <span class="stat-number-icon"><i class="fas fa-file-alt"></i></span>
                              <span class="stat-detail">
                                 <span class="stat-maintext">4 Publications</span>
@@ -82,19 +93,23 @@
                             </span>
                         </div>
                     </div>
-                    <a href="#projects" class="cta-button animate-on-scroll fade-in-up delay-3"><span>Explore My Work</span></a>
+                    <div class="hero-buttons animate-on-scroll fade-in-up delay-4">
+                        <a href="#projects" class="cta-button"><span>Explore My Work</span></a>
+                        <a href="resume/Shyantan_Kundu_Resume.pdf" class="cta-button secondary" download="Shyantan_Kundu_Resume.pdf" rel="noopener noreferrer"><i class="fas fa-download"></i> Resume</a>
+                        <a href="resume/Shyantan_Kundu.pdf" class="cta-button secondary" download="Shyantan_Kundu_CV.pdf" rel="noopener noreferrer"><i class="fas fa-download"></i> Detailed CV</a>
+                    </div>
                 </div>
-                <div class="hero-image-container animate-on-scroll pop-in delay-1">
+                <div class="hero-image-container animate-on-scroll pop-in delay-2">
                     <img src="img/shyantan_hero_photo.jpg" alt="Shyantan Kundu" class="hero-photo"> 
                 </div>
             </div>
             <div class="scroll-down-indicator">
-                <a href="#objective"><span></span><span></span><span></span></a>
+                <a href="#objective" aria-label="Scroll to objective section"><span></span><span></span><span></span></a>
             </div>
         </section>
 
         <section id="objective" class="content-section alt-bg">
-            <div class="container">
+             <div class="container">
                 <h2 class="section-title animate-on-scroll fade-in-up">My Objective</h2>
                 <p class="animate-on-scroll fade-in-up delay-1 section-intro-text">
                     With all my due skillset I want to solve problem statements lying around in the world for the future betterment of society and personal development as well. I desire to engineer solutions in fields of green & alternative energy, recycling & Electronics, IoT based products for usage in daily lives.
@@ -103,7 +118,7 @@
         </section>
         
         <section id="education" class="content-section">
-             <div class="container">
+            <div class="container">
                 <h2 class="section-title animate-on-scroll fade-in-up">Education</h2>
                 <div class="timeline">
                     <div class="timeline-item animate-on-scroll slide-in-from-left">
@@ -132,7 +147,7 @@
                             </ul>
                         </div>
                     </div>
-                     <div class="timeline-item animate-on-scroll slide-in-from-left">
+                     <div class="timeline-item animate-on-scroll slide-in-from-left delay-1">
                         <div class="timeline-icon"><i class="fas fa-book-reader"></i></div>
                         <div class="timeline-content">
                             <h3>Calcutta Airport English High School (H.S.)</h3>
@@ -150,7 +165,7 @@
         </section>
 
         <section id="experience" class="content-section alt-bg">
-            <div class="container">
+             <div class="container">
                 <h2 class="section-title animate-on-scroll fade-in-up">Work Experience</h2>
                 <div class="experience-grid stagger-children">
                     <div class="experience-card animate-on-scroll pop-in stagger-item">
@@ -173,7 +188,7 @@
                             <li>Parts, Material Finding & Acquisition.</li>
                         </ul>
                     </div>
-                    <div class="experience-card animate-on-scroll pop-in stagger-item">
+                    <div class="experience-card animate-on-scroll pop-in stagger-item delay-1">
                         <h3>Student Member</h3>
                         <p class="company">IEDC Lab, (Institutional IIC), IEM, Sec V, Kolkata</p>
                         <p class="date">March 2023 - Dec 2023 | Mentor: Dr. Priti Das (Ph.D., Lab Researcher)</p>
@@ -195,7 +210,7 @@
                             <li>Building projects from scratch to full prototypical level.</li>
                         </ul>
                     </div>
-                    <div class="experience-card animate-on-scroll pop-in stagger-item">
+                    <div class="experience-card animate-on-scroll pop-in stagger-item delay-2">
                         <h3>AI-ML Virtual Internship</h3>
                         <p class="company">AWS Academy, Amazon</p>
                         <p class="date">May 2023 - July 2023</p>
@@ -220,12 +235,13 @@
                 <div id="software-iot-projects" class="tab-content active">
                     <h3 class="sub-section-title-tabs">Software / IoT Focused</h3>
                     <div class="project-grid stagger-children">
+                        <!-- Project Card Example -->
                         <div class="project-card animate-on-scroll pop-in stagger-item">
-                            <div class="project-image-album-slider">
-                                <div><img src="img/project_v2e_dashboard_img1.png" alt="V2E Dashboard - Main" data-title="V2V Dashboard: Main UI" data-subtext="Overview of inter-vehicle communication features."></div>
-                                <div><img src="img/project_v2e_dashboard_img2.png" alt="V2E Dashboard - Stats" data-title="Statistics & Registration" data-subtext="Data logging and vehicle registration module."></div>
-                                <div><img src="img/project_v2e_dashboard_img3.png" alt="V2E Dashboard - Emergency" data-title="Emergency Assistance" data-subtext="Interface for various emergency scenarios."></div>    
-                                <div class="youtube-placeholder" data-youtube-id="VIDEO_ID_V2X"> <!-- Replace VIDEO_ID_V2X -->
+                            <div class="project-image-album-slider auto-scroll-hover">
+                                <div><a href="img/project_v2e_dashboard_img1.png" data-lightbox="project-v2e" data-title="V2V Dashboard: Main UI"><img src="img/project_v2e_dashboard_img1.png" alt="V2E Dashboard - Main" data-title="V2V Dashboard: Main UI" data-subtext="Overview of inter-vehicle communication features."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                                <div><a href="img/project_v2e_dashboard_img2.png" data-lightbox="project-v2e" data-title="Statistics & Registration"><img src="img/project_v2e_dashboard_img2.png" alt="V2E Dashboard - Stats" data-title="Statistics & Registration" data-subtext="Data logging and vehicle registration module."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                                <div><a href="img/project_v2e_dashboard_img3.png" data-lightbox="project-v2e" data-title="Emergency Assistance"><img src="img/project_v2e_dashboard_img3.png" alt="V2E Dashboard - Emergency" data-title="Emergency Assistance" data-subtext="Interface for various emergency scenarios."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>    
+                                <div class="youtube-placeholder" data-youtube-id="VIDEO_ID_V2X"> 
                                     <img src="img/youtube_placeholder_v2e.png" alt="V2E Dashboard Demo Video">
                                     <i class="fab fa-youtube"></i><span>View Demo</span>
                                 </div>
@@ -238,14 +254,15 @@
                                 <div class="project-buttons">
                                     <a href="https://github.com/shaneVR097/v2x" target="_blank" rel="noopener noreferrer" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a>
                                     <a href="https://shanevr097.github.io/v2x/" target="_blank" rel="noopener noreferrer" class="project-link-btn demo"><i class="fas fa-play-circle"></i> Live Demo</a>
+                                    <a href="pdfs/v2v_report.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn report"><i class="fas fa-file-pdf"></i> View Report</a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-card animate-on-scroll pop-in stagger-item">
-                            <div class="project-image-album-slider">
-                                <div><img src="img/project_waste_oil_automation_img1.png" alt="WOR Automation - Control" data-title="WOR: Automation Control" data-subtext="STM32 based interface for process control."></div>
-                                 <div><img src="img/project_waste_oil_automation_img2.png" alt="WOR Automation - Logic" data-title="WOR: Process Logic" data-subtext="Algorithm flow for automated recycling."></div>
-                                <div class="youtube-placeholder" data-youtube-id="LSFb08G136Y"> <!-- Assuming WOR demo link for automation part too -->
+                            <div class="project-image-album-slider auto-scroll-hover">
+                                <div><a href="img/project_waste_oil_automation_img1.png" data-lightbox="project-wor-auto" data-title="WOR: Automation Control"><img src="img/project_waste_oil_automation_img1.png" alt="WOR Automation - Control" data-title="WOR: Automation Control" data-subtext="STM32 based interface for process control."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                                 <div><a href="img/Picture22.png" data-lightbox="project-wor-auto" data-title="WOR: Process Logic"><img src="img/Picture22.png" alt="WOR Automation - Logic" data-title="WOR: Process Logic" data-subtext="Algorithm flow for automated recycling."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                                <div class="youtube-placeholder" data-youtube-id="LSFb08G136Y"> 
                                     <img src="img/youtube_placeholder_wor_auto.png" alt="WOR Automation Demo">
                                     <i class="fab fa-youtube"></i><span>View Demo</span>
                                 </div>
@@ -258,13 +275,13 @@
                                  <div class="project-buttons">
                                     <a href="https://github.com/AdrijaGhosh/Waste-Oil-Recycler" target="_blank" rel="noopener noreferrer" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a>
                                     <a href="https://youtu.be/LSFb08G136Y" target="_blank" rel="noopener noreferrer" class="project-link-btn demo"><i class="fas fa-play-circle"></i> View Demo</a>
+                                    <a href="pdfs/wor_report.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn report"><i class="fas fa-file-pdf"></i> View Report</a>
                                  </div>
                             </div>
                         </div>
                         <div class="project-card animate-on-scroll pop-in stagger-item">
-                            <div class="project-image-album-slider">
-                                <div><img src="img/project_magnetic_lock_img1.png" alt="Magnetic Lock - Device" data-title="Anti-Theft Tag: Device" data-subtext="IoT Prototype with HC-05 Bluetooth on Arduino."></div>
-                                <div><img src="img/project_magnetic_lock_img2.png" alt="Magnetic Lock - Alert" data-title="Instantaneous Alarm" data-subtext="2-way secured user alertness system."></div>
+                            <div class="project-image-album-slider auto-scroll-hover">
+                                <div><a href="img/project_magnetic_lock_img1.png" data-lightbox="project-mls" data-title="Anti-Theft Tag: Device"><img src="img/project_magnetic_lock_img1.png" alt="Magnetic Lock - Device" data-title="Anti-Theft Tag: Device" data-subtext="IoT Prototype with HC-05 Bluetooth on Arduino."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
                                 <div class="youtube-placeholder" data-youtube-id="cFrx3qBkc1Q">
                                     <img src="img/youtube_placeholder_maglock.png" alt="Magnetic Lock Demo">
                                     <i class="fab fa-youtube"></i><span>View Demo</span>
@@ -278,13 +295,13 @@
                                 <div class="project-buttons">
                                     <a href="https://github.com/shaneVR097/magnetic_lock_sensor" target="_blank" rel="noopener noreferrer" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a>
                                     <a href="https://youtu.be/cFrx3qBkc1Q" target="_blank" rel="noopener noreferrer" class="project-link-btn demo"><i class="fas fa-play-circle"></i> View Demo</a>
+                                    <a href="pdfs/mls__report.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn report"><i class="fas fa-file-pdf"></i> View Report</a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-card animate-on-scroll pop-in stagger-item">
-                            <div class="project-image-album-slider">
-                                <div><img src="img/project_heart_rate_monitor_img1.png" alt="HRM - Device" data-title="IoT Heart Monitor: Device" data-subtext="Low-cost health monitoring hardware."></div>
-                                <div><img src="img/project_heart_rate_monitor_img2.png" alt="HRM - Prediction" data-title="ML Disease Prediction" data-subtext="Multi-parameter input for heart disease risk."></div>
+                            <div class="project-image-album-slider auto-scroll-hover">
+                                <div><a href="img/project_heart_rate_monitor_img1.png" data-lightbox="project-hrm" data-title="IoT Heart Monitor: Device"><img src="img/project_heart_rate_monitor_img1.png" alt="HRM - Device" data-title="IoT Heart Monitor: Device" data-subtext="Low-cost health monitoring hardware."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
                                 <div class="youtube-placeholder" data-youtube-id="jA7D5Hc6HpU">
                                     <img src="img/youtube_placeholder_hrm.png" alt="HRM Demo">
                                     <i class="fab fa-youtube"></i><span>View Demo</span>
@@ -298,13 +315,13 @@
                                 <div class="project-buttons">
                                     <a href="https://github.com/shaneVR097/heart_rate_monitor_2025_iot" target="_blank" rel="noopener noreferrer" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a>
                                     <a href="https://heartify-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn demo"><i class="fas fa-play-circle"></i> Live Site</a>
+                                    <a href="pdfs/hrm_report.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn report"><i class="fas fa-file-pdf"></i> View Report</a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-card animate-on-scroll pop-in stagger-item">
-                            <div class="project-image-album-slider">
-                               <div><img src="img/project_pizza_ecommerce_img1.png" alt="Pizza Site - UI" data-title="E-Commerce: Frontend" data-subtext="User-friendly pizza delivery interface."></div>
-                               <div><img src="img/project_pizza_ecommerce_img2.png" alt="Pizza Site - Agile" data-title="Agile Management" data-subtext="Scrum board and development iterations."></div>
+                            <div class="project-image-album-slider auto-scroll-hover">
+                               <div><a href="img/project_pizza_ecommerce_img1.png" data-lightbox="project-pizza" data-title="E-Commerce: Frontend"><img src="img/project_pizza_ecommerce_img1.png" alt="Pizza Site - UI" data-title="E-Commerce: Frontend" data-subtext="User-friendly pizza delivery interface."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
                             </div>
                            <div class="project-image-caption"><h5 class="image-title-overlay"></h5><p class="image-subtext-overlay"></p></div>
                            <div class="project-info">
@@ -312,14 +329,15 @@
                                <p class="project-role">Role: Scrum Master</p>
                                <p>Coordinated Daily Scrum, Practiced Agile Developmental Strategies. Managed team as Front-end Designer. Improved user experience by 40%, 70% faster development.</p>
                                <div class="project-buttons">
-                                   <a href="#" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a>
-                                   <a href="#" class="project-link-btn demo"><i class="fas fa-play-circle"></i> Live Demo</a>
+                                   <a href="#" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a> <!-- Add actual link if available -->
+                                   <a href="#" class="project-link-btn demo"><i class="fas fa-play-circle"></i> Live Demo</a> <!-- Add actual link if available -->
+                                   <a href="pdfs/ipm_ecomm_report.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn report"><i class="fas fa-file-pdf"></i> View Report</a>
                                 </div>
                            </div>
                        </div>
                        <div class="project-card animate-on-scroll pop-in stagger-item">
-                            <div class="project-image-album-slider">
-                               <div><img src="img/project_number_guessing_img1.png" alt="Guessing Game - UI" data-title="Number Guessing: UI" data-subtext="MATLAB based game interface."></div>
+                            <div class="project-image-album-slider auto-scroll-hover">
+                               <div><a href="img/project_number_guessing_img1.png" data-lightbox="project-guess" data-title="Number Guessing: UI"><img src="img/project_number_guessing_img1.png" alt="Guessing Game - UI" data-title="Number Guessing: UI" data-subtext="MATLAB based game interface."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
                             </div>
                            <div class="project-image-caption"><h5 class="image-title-overlay"></h5><p class="image-subtext-overlay"></p></div>
                            <div class="project-info">
@@ -328,13 +346,14 @@
                                <p>A fun, tactical MATLAB Game with multi-parameter inputs for guessing a Number with player settings (User vs System/User). Increased user engagement by 40%.</p>
                                <div class="project-buttons">
                                    <a href="https://github.com/shaneVR097/shyantan_MATLAB_apps" target="_blank" rel="noopener noreferrer" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a>
-                                   <a href="#" class="project-link-btn demo"><i class="fas fa-play-circle"></i> Live Demo</a>
+                                   <a href="#" class="project-link-btn demo"><i class="fas fa-play-circle"></i> Live Demo</a> <!-- Add actual link if available -->
+                                   <a href="pdfs/Num_guess_game_proj_report.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn report"><i class="fas fa-file-pdf"></i> View Report</a>
                                 </div>
                            </div>
                        </div>
                        <div class="project-card animate-on-scroll pop-in stagger-item">
-                           <div class="project-image-album-slider">
-                               <div><img src="img/project_calculator_multifunction_img1.png" alt="Calculator - UI" data-title="Calculator: Interface" data-subtext="MATLAB GUI for 12-function calculator."></div>
+                           <div class="project-image-album-slider auto-scroll-hover">
+                               <div><a href="img/project_calculator_multifunction_img1.png" data-lightbox="project-calc" data-title="Calculator: Interface"><img src="img/project_calculator_multifunction_img1.png" alt="Calculator - UI" data-title="Calculator: Interface" data-subtext="MATLAB GUI for 12-function calculator."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
                            </div>
                            <div class="project-image-caption"><h5 class="image-title-overlay"></h5><p class="image-subtext-overlay"></p></div>
                            <div class="project-info">
@@ -343,7 +362,8 @@
                                <p>A Robust 12-function MATLAB Mathematical Calculator for basic-to-intermediate calculations. Improved calculation accuracy by 25%.</p>
                                <div class="project-buttons">
                                    <a href="https://github.com/shaneVR097/shyantan_MATLAB_apps" target="_blank" rel="noopener noreferrer" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a>
-                                   <a href="#" class="project-link-btn demo"><i class="fas fa-play-circle"></i> Live Demo</a>
+                                   <a href="#" class="project-link-btn demo"><i class="fas fa-play-circle"></i> Live Demo</a> <!-- Add actual link if available -->
+                                   <a href="pdfs/Num_calculator_proj_report.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn report"><i class="fas fa-file-pdf"></i> View Report</a>
                                 </div>
                            </div>
                        </div>
@@ -354,9 +374,8 @@
                     <h3 class="sub-section-title-tabs">Hardware Focused</h3>
                     <div class="project-grid stagger-children">
                         <div class="project-card animate-on-scroll pop-in stagger-item">
-                             <div class="project-image-album-slider">
-                                <div><img src="img/project_waste_oil_recycler_hw_img1.png" alt="WOR HW - Prototype 1" data-title="WOR: Automated Unit" data-subtext="Fully functional and automated prototype."></div>
-                                <div><img src="img/project_waste_oil_recycler_hw_img2.png" alt="WOR HW - Process" data-title="Recycling Mechanism" data-subtext="Conversion of used lubricant to fuel-oil."></div>
+                             <div class="project-image-album-slider auto-scroll-hover">
+                                <div><a href="img/project_waste_oil_recycler_hw_img1.png" data-lightbox="project-wor-hw" data-title="WOR: Automated Unit"><img src="img/project_waste_oil_recycler_hw_img1.png" alt="WOR HW - Prototype 1" data-title="WOR: Automated Unit" data-subtext="Fully functional and automated prototype."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
                                 <div class="youtube-placeholder" data-youtube-id="LSFb08G136Y">
                                     <img src="img/youtube_placeholder_wor_hw.png" alt="WOR Hardware Demo">
                                     <i class="fab fa-youtube"></i><span>View Demo</span>
@@ -370,13 +389,13 @@
                                 <div class="project-buttons">
                                     <a href="https://github.com/AdrijaGhosh/Waste-Oil-Recycler" target="_blank" rel="noopener noreferrer" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a>
                                     <a href="https://youtu.be/LSFb08G136Y" target="_blank" rel="noopener noreferrer" class="project-link-btn demo"><i class="fas fa-play-circle"></i> View Demo</a>
+                                    <a href="pdfs/wor_report.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn report"><i class="fas fa-file-pdf"></i> View Report</a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-card animate-on-scroll pop-in stagger-item">
-                             <div class="project-image-album-slider">
-                                <div><img src="img/project_fire_emergency_base_img1.png" alt="Fire Base - System" data-title="Fire Base: 3-Axis System" data-subtext="IoT-based long-distance fire extinguishment."></div>
-                                <div><img src="img/project_fire_emergency_base_img2.png" alt="Fire Base - Targeting" data-title="Targeting Mechanism" data-subtext="Recognizes fire coordinates and aligns."></div>
+                             <div class="project-image-album-slider auto-scroll-hover">
+                                <div><a href="img/project_fire_emergency_base_img1.png" data-lightbox="project-fire" data-title="Fire Base: 3-Axis System"><img src="img/project_fire_emergency_base_img1.png" alt="Fire Base - System" data-title="Fire Base: 3-Axis System" data-subtext="IoT-based long-distance fire extinguishment."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
                                 <div class="youtube-placeholder" data-youtube-id="VWjxra1JiP8">
                                     <img src="img/youtube_placeholder_fire.png" alt="Fire Base Demo">
                                     <i class="fab fa-youtube"></i><span>View Demo</span>
@@ -390,13 +409,13 @@
                                 <div class="project-buttons">
                                     <a href="https://github.com/shaneVR097/firelinx_iot" target="_blank" rel="noopener noreferrer" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a>
                                     <a href="https://youtu.be/VWjxra1JiP8" target="_blank" rel="noopener noreferrer" class="project-link-btn demo"><i class="fas fa-play-circle"></i> View Demo</a>
+                                    <a href="pdfs/firelinx_report.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn report"><i class="fas fa-file-pdf"></i> View Report</a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-card animate-on-scroll pop-in stagger-item">
-                            <div class="project-image-album-slider">
-                               <div><img src="img/project_plastic_refill_recycler_img1.png" alt="Plastic Recycler - Device" data-title="Plastic Recycler: Unit" data-subtext="Recycling empty plastic refills."></div>
-                               <div><img src="img/project_plastic_refill_recycler_img2.png" alt="Plastic Recycler - Filament" data-title="3D Filament Output" data-subtext="Produces low-cost re-usable 3D filament."></div>
+                            <div class="project-image-album-slider auto-scroll-hover">
+                               <div><a href="img/project_plastic_refill_recycler_img1.png" data-lightbox="project-plastic" data-title="Plastic Recycler: Unit"><img src="img/project_plastic_refill_recycler_img1.png" alt="Plastic Recycler - Device" data-title="Plastic Recycler: Unit" data-subtext="Recycling empty plastic refills."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
                                 <div class="youtube-placeholder" data-youtube-id="EfxDVZk-XWg">
                                     <img src="img/youtube_placeholder_plastic.png" alt="Plastic Recycler Demo">
                                     <i class="fab fa-youtube"></i><span>View Demo</span>
@@ -408,14 +427,15 @@
                                <p class="project-role">Role: Team Lead & Project Ideation</p>
                                <p>Recycles empty plastic refills into low-cost re-usable 3D filament. Patent Applied. Won Multiple College Innovative-Project Competitions.</p>
                                <div class="project-buttons">
-                                   <a href="#" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a>
+                                   <a href="#" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a> <!-- Add actual link if available -->
                                    <a href="https://youtu.be/EfxDVZk-XWg" target="_blank" rel="noopener noreferrer" class="project-link-btn demo"><i class="fas fa-play-circle"></i> View Demo</a>
+                                   <a href="pdfs/prr_report.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn report"><i class="fas fa-file-pdf"></i> View Report</a>
                                 </div>
                            </div>
                        </div>
                        <div class="project-card animate-on-scroll pop-in stagger-item">
-                            <div class="project-image-album-slider">
-                               <div><img src="img/project_stress_sense_pedal_img1.png" alt="Stress Pedal - Device" data-title="Stress Pedal: Prototype" data-subtext="Device for sensing stress via foot-tapping."></div>
+                            <div class="project-image-album-slider auto-scroll-hover">
+                               <div><a href="img/project_stress_sense_pedal_img1.png" data-lightbox="project-ssp" data-title="Stress Pedal: Prototype"><img src="img/project_stress_sense_pedal_img1.png" alt="Stress Pedal - Device" data-title="Stress Pedal: Prototype" data-subtext="Device for sensing stress via foot-tapping."><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
                                 <div class="youtube-placeholder" data-youtube-id="t3lzCQA4piM">
                                     <img src="img/youtube_placeholder_stress.png" alt="Stress Pedal Demo">
                                     <i class="fab fa-youtube"></i><span>View Demo</span>
@@ -429,6 +449,7 @@
                                <div class="project-buttons">
                                    <a href="https://github.com/shaneVR097/stress_sense_pedal" target="_blank" rel="noopener noreferrer" class="project-link-btn code"><i class="fab fa-github"></i> Project Repo</a>
                                    <a href="https://youtube.com/shorts/t3lzCQA4piM?feature=share" target="_blank" rel="noopener noreferrer" class="project-link-btn demo"><i class="fas fa-play-circle"></i> View Demo</a>
+                                   <a href="pdfs/ssp_report.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn report"><i class="fas fa-file-pdf"></i> View Report</a>
                                 </div>
                            </div>
                        </div>
@@ -439,27 +460,37 @@
 
         <section id="accomplishments" class="content-section alt-bg">
             <div class="container">
-                <h2 class="section-title animate-on-scroll fade-in-up">Key Accomplishments</h2>
-
+                <h2 class="section-title animate-on-scroll fade-in-up">Key Accomplishments & News</h2>
                 <div class="top-achievements-grid animate-on-scroll fade-in-up delay-1">
+                    <!-- Top Achievement Card Example (repeat for others) -->
                     <div class="top-achievement-card">
-                        <img src="img/award_ust_sight.png" alt="UST SIGHT 2.0 Grand Finale">
+                        <div class="achievement-image-album auto-scroll-hover">
+                            <div><a href="img/award_ust_sight.png" data-lightbox="ust-sight" data-title="UST SIGHT 2.0 Winning Moment"><img src="img/award_ust_sight.png" alt="UST SIGHT 2.0 Grand Finale"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <!-- Add more images for UST SIGHT: <div><a href="img/award_ust_sight_cert.png" data-lightbox="ust-sight" data-title="Certificate"><img src="img/award_ust_sight_cert.png" alt="Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div> -->
+                        </div>
                         <div class="top-ach-content">
                             <h3>WINNER - UST SIGHT 2.0 Grand Finale</h3>
-                            <p>UST Global Campus, Trivandrum (May 2025). 1st/1000+ entries. Project: Waste Oil Recycler.</p>
+                            <p>UST Global Campus, Trivandrum (May 2025). 1st/1000+ entries. Project: Waste Oil Recycler. <a href="https://www.ust.com/en/who-we-are/ust-newsroom/1000-teams-from-professional-colleges-across-india-vie-for-top-honours-at-ust-sight-20-competition" target="_blank" rel="noopener noreferrer" class="news-link">Read News</a></p>
                             <span class="top-ach-tag">National Winner (Gold)</span>
                         </div>
                     </div>
-                    <div class="top-achievement-card">
-                        <img src="img/award_aicte_inventors.png" alt="AICTE Inventors' Challenge">
+                     <div class="top-achievement-card">
+                         <div class="achievement-image-album auto-scroll-hover">
+                            <div><a href="img/award_aicte_inventors_pic.png" data-lightbox="aicte" data-title="AICTE Inventors' Challenge Pic 1"><img src="img/award_aicte_inventors_pic.png" alt="AICTE Inventors' Challenge"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_aicte_inventors_pic2.png" data-lightbox="aicte" data-title="AICTE Inventors' Challenge Pic 2"><img src="img/award_aicte_inventors_pic2.png" alt="AICTE Inventors' Challenge Image 2"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_aicte_inventors_cert.png" data-lightbox="aicte" data-title="AICTE Inventors' Challenge Certificate"><img src="img/award_aicte_inventors_cert.png" alt="AICTE Inventors' Challenge Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
                         <div class="top-ach-content">
                             <h3>WINNER - AICTE Inventors' Challenge 2024</h3>
-                            <p>LIET, Noida (Nov 2024). Top 100/2765. Project: Automating Waste Oil Recycler.</p>
+                            <p>LIET, Noida (Nov 2024). Top 100/2765. Project: Automating Waste Oil Recycler. <a href="https://www.aninews.in/news/business/iem-kolkata-wins-aicte-inventors-challenge-202420241118165606/" target="_blank" rel="noopener noreferrer" class="news-link">Read News</a></p>
                             <span class="top-ach-tag">National Winner</span>
                         </div>
                     </div>
                     <div class="top-achievement-card">
-                        <img src="img/award_nit_jamshedpur_iac.png" alt="NIT Jamshedpur IAC">
+                        <div class="achievement-image-album auto-scroll-hover">
+                            <div><a href="img/award_nit_jamshedpur_iac_pic.png" data-lightbox="nit-jsr" data-title="NIT Jamshedpur IAC Pic"><img src="img/award_nit_jamshedpur_iac_pic.png" alt="NIT Jamshedpur IAC"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_nit_jamshedpur_iac_cert.png" data-lightbox="nit-jsr" data-title="NIT Jamshedpur IAC Certificate"><img src="img/award_nit_jamshedpur_iac_cert.png" alt="NIT Jamshedpur IAC Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
                         <div class="top-ach-content">
                              <h3>WINNER - Model Presentation, Industry Academia Conclave 2024</h3>
                              <p>NIT Jamshedpur (Nov 2024). Project: Waste Oil Recycler.</p>
@@ -467,7 +498,11 @@
                         </div>
                     </div>
                     <div class="top-achievement-card">
-                        <img src="img/award_iocl_sustainathon.png" alt="IOCL Sustainathon">
+                        <div class="achievement-image-album auto-scroll-hover">
+                            <div><a href="img/award_iocl_sustainathon_pic1.png" data-lightbox="iocl" data-title="IOCL Sustainathon Pic 1"><img src="img/award_iocl_sustainathon_pic1.png" alt="IOCL Sustainathon"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_iocl_sustainathon_pic2.jpg" data-lightbox="iocl" data-title="IOCL Sustainathon Pic 2"><img src="img/award_iocl_sustainathon_pic2.jpg" alt="IOCL Sustainathon Image 2"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_iocl_sustainathon_cert.png" data-lightbox="iocl" data-title="IOCL Sustainathon Certificate"><img src="img/award_iocl_sustainathon_cert.png" alt="IOCL Sustainathon Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
                         <div class="top-ach-content">
                             <h3>AIR 4 - SUSTAINATHON – Indian Oil Corporation Ltd.</h3>
                             <p>(June 2024). Top 12/32,000 teams. Project: Waste Oil Recycler.</p>
@@ -475,124 +510,226 @@
                         </div>
                     </div>
                     <div class="top-achievement-card">
-                        <img src="img/award_green_bengal_contest.png" alt="Green Bengal Innovation Contest">
+                         <div class="achievement-image-album auto-scroll-hover">
+                            <div><a href="img/award_green_bengal_2024_pic.png" data-lightbox="green-bengal" data-title="Green Bengal Pic"><img src="img/award_green_bengal_2024_pic.png" alt="Green Bengal Innovation Contest"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_green_bengal_2024_proj.png" data-lightbox="green-bengal" data-title="Green Bengal Project"><img src="img/award_green_bengal_2024_proj.png" alt="Green Bengal Project Image"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_green_bengal_2024_cert.png" data-lightbox="green-bengal" data-title="Green Bengal Certificate"><img src="img/award_green_bengal_2024_cert.png" alt="Green Bengal Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
                         <div class="top-ach-content">
                             <h3>WINNER - Green Bengal Innovation Contest 2023-24</h3>
                             <p>(March 2024). 1st in Pitch-to-Jury. Project: Waste Oil Recycler.</p>
                             <span class="top-ach-tag">State Level Winner</span>
                         </div>
                     </div>
+                    <div class="top-achievement-card"> 
+                        <div class="achievement-image-album auto-scroll-hover">
+                            <div><a href="img/award_loreto_house_pic1.png" data-lightbox="loreto" data-title="Innovate For Impact Pic 1"><img src="img/award_loreto_house_pic1.png" alt="Innovate For Impact - Loreto College"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_loreto_house_pic2.png" data-lightbox="loreto" data-title="Innovate For Impact Pic 2"><img src="img/award_loreto_house_pic2.png" alt="Innovate For Impact Image 2"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_loreto_house_cert.png" data-lightbox="loreto" data-title="Innovate For Impact Certificate"><img src="img/award_loreto_house_cert.png" alt="Innovate For Impact Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="top-ach-content">
+                            <h3>1st Runner-Up - Innovate For Impact 2025</h3>
+                            <p>Loreto College & IIM Calcutta Innovation Park. Project: Waste Oil Recycler. <a href="https://aajtalkss.in/2025/04/05/loreto-college-ignites-innovation-shaping-a-sustainable-future/" target="_blank" rel="noopener noreferrer" class="news-link">Read News</a></p>
+                            <span class="top-ach-tag">Inter-College Recognition</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <h3 class="sub-section-title animate-on-scroll fade-in-up" style="margin-top:60px;">Other Notable Achievements</h3>
                 <div class="other-achievements-grid stagger-children">
+                    <!-- Other Achievement Item Example (repeat for others) -->
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-award ach-icon"></i>
-                        <h4>WINNER - Biznez Plan, Srijan'25 – Jadavpur University</h4>
-                        <p>April 2025. 1st/16 finalists (from 98 applicants). Project: Waste Oil Recycler.</p>
-                        <span class="ach-type-tag">University Level</span>
+                        <div class="achievement-image-album auto-scroll-hover small-album">
+                           <div><a href="img/award_ju_biznez_plan_pic.png" data-lightbox="ju-biznez" data-title="JU Biznez Plan Pic"><img src="img/award_ju_biznez_plan_pic.png" alt="Srijan Biznez Plan"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                           <div><a href="img/award_ju_biznez_plan_cert.png" data-lightbox="ju-biznez" data-title="JU Biznez Plan Certificate"><img src="img/award_ju_biznez_plan_cert.png" alt="Srijan Biznez Plan Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-award ach-icon-inline"></i>WINNER - Biznez Plan, Srijan'25 – Jadavpur University</h4>
+                            <p>April 2025. 1st/16 finalists (from 98 applicants). Project: Waste Oil Recycler.</p>
+                            <span class="ach-type-tag">University Level</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-medal ach-icon"></i>
-                        <h4>1st Runner-Up - Innovate For Impact 2025</h4>
-                        <p>Feb 2025. Loreto College & IIM Calcutta Innovation Park. 2nd/Top 8. Awarded ₹20,000. Project: Waste Oil Recycler.</p>
-                        <span class="ach-type-tag">Inter-College</span>
+                        <div class="achievement-image-album auto-scroll-hover small-album">
+                            <div><a href="img/award_loreto_house_pic1.png" data-lightbox="loreto-impact-other" data-title="Innovate For Impact Pic 1"><img src="img/award_loreto_house_pic1.png" alt="Innovate For Impact"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_loreto_house_pic2.png" data-lightbox="loreto-impact-other" data-title="Innovate For Impact Pic 2"><img src="img/award_loreto_house_pic2.png" alt="Innovate For Impact"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_loreto_house_cert.png" data-lightbox="loreto-impact-other" data-title="Innovate For Impact Certificate"><img src="img/award_loreto_house_cert.png" alt="Innovate For Impact Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                           <h4> <i class="fas fa-medal ach-icon-inline"></i>1st Runner-Up - Innovate For Impact 2025</h4>
+                            <p>Feb 2025. Loreto College & IIM Calcutta Innovation Park. 2nd/Top 8. Awarded ₹20,000. Project: Waste Oil Recycler.</p>
+                            <span class="ach-type-tag">Inter-College</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-file-powerpoint ach-icon"></i>
-                        <h4>2nd Best Poster - Intl. Conf. on Electronics, Materials Engg. & Nano Tech 2025</h4>
-                        <p>Nov 2024.</p>
-                        <span class="ach-type-tag">Intl. Conference</span>
+                        <div class="achievement-image-album auto-scroll-hover small-album">
+                            <div><a href="img/iementech_2025_presenter_cert.png" data-lightbox="emen-conf" data-title="EMEN 2025 Presenter Cert"><img src="img/iementech_2025_presenter_cert.png" alt="Electronics Conference Poster Cert"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                         <div class="other-ach-content">
+                            <h4><i class="fas fa-file-powerpoint ach-icon-inline"></i>2nd Best Poster - Intl. Conf. on Electronics, Materials Engg. & Nano Tech 2025</h4>
+                            <p>Nov 2024.</p>
+                            <span class="ach-type-tag">Intl. Conference</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-lightbulb ach-icon"></i>
-                        <h4>WINNER - Innovate-ON - IET IEM Students Chapter</h4>
-                        <p>Oct 2024. EE & EEE Dept. of IEM.</p>
-                        <span class="ach-type-tag">College Level</span>
+                        <div class="achievement-image-album auto-scroll-hover small-album">
+                           <div><a href="img/award_iet_innovate_on_2024_cert.png" data-lightbox="iet-innovate" data-title="IET Innovate-ON Certificate"><img src="img/award_iet_innovate_on_2024_cert.png" alt="Innovate-ON IEM Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-lightbulb ach-icon-inline"></i>WINNER - Innovate-ON - IET IEM Students Chapter</h4>
+                            <p>Oct 2024. EE & EEE Dept. of IEM.</p>
+                            <span class="ach-type-tag">College Level</span>
+                        </div>
+                    </div>
+                     <!-- ... Add other achievement items similarly, ensuring <a> and <img> for Lightbox and <span class="enlarge-icon-overlay"> ... -->
+                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
+                        <div class="achievement-image-album auto-scroll-hover small-album">
+                            <div><a href="img/award_pitchers_genesis_iim_cal_2024_cert.png" data-lightbox="iim-pitchers" data-title="IIM Calcutta Pitchers Certificate"><img src="img/award_pitchers_genesis_iim_cal_2024_cert.png" alt="IIM Calcutta Pitchers Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                           <h4> <i class="fas fa-microphone-alt ach-icon-inline"></i>3rd - Pitchers 2024 - Indian Institute of management, Calcutta</h4>
+                            <p>Sept 2024.</p>
+                            <span class="ach-type-tag">National Level</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-microphone-alt ach-icon"></i>
-                        <h4>3rd - Pitchers 2024 - Indian Institute of management, Calcutta</h4>
-                        <p>Sept 2024.</p>
-                        <span class="ach-type-tag">National Level</span>
+                         <div class="achievement-image-album auto-scroll-hover small-album">
+                            <div><a href="img/award_nirmiti_rerf_2024_pic.png" data-lightbox="nirmiti-rerf" data-title="Nirmiti RERF Pic"><img src="img/award_nirmiti_rerf_2024_pic.png" alt="Nirmiti Startup Conclave Pic"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_nirmiti_rerf_2024_cert.png" data-lightbox="nirmiti-rerf" data-title="Nirmiti RERF Certificate"><img src="img/award_nirmiti_rerf_2024_cert.png" alt="Nirmiti Startup Conclave Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-rocket ach-icon-inline"></i>2nd - Start-Up Conclave – Nirmiti 2024 RERF, Barrackpore</h4>
+                            <p>Sept 2024.</p>
+                            <span class="ach-type-tag">Regional Level</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-rocket ach-icon"></i>
-                        <h4>2nd - Start-Up Conclave – Nirmiti 2024 RERF, Barrackpore</h4>
-                        <p>Sept 2024.</p>
-                        <span class="ach-type-tag">Regional Level</span>
+                        <div class="achievement-image-album auto-scroll-hover small-album">
+                           <div><a href="img/award_Pitch_Perfect_ioct_iocl_bhubaneshwar_2024.png" data-lightbox="ict-pitch" data-title="ICT Bhubaneswar Pitch Perfect"><img src="img/award_Pitch_Perfect_ioct_iocl_bhubaneshwar_2024.png" alt="ICT Bhubaneswar Pitch Perfect"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                           <h4> <i class="fas fa-bullhorn ach-icon-inline"></i>2nd - Pitch Perfect - Institute of Chemical Technology, Bhubaneswar</h4>
+                            <p>Aug 2024.</p>
+                            <span class="ach-type-tag">National Level</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-bullhorn ach-icon"></i>
-                        <h4>2nd - Pitch Perfect - Institute of Chemical Technology, Bhubaneswar</h4>
-                        <p>Aug 2024.</p>
-                        <span class="ach-type-tag">National Level</span>
+                        <div class="achievement-image-album auto-scroll-hover small-album">
+                           <div><a href="img/award_bio_informatics_iedc_cse_pic.png" data-lightbox="bioinfo-hack" data-title="Bio-Informatics Hackathon Pic"><img src="img/award_bio_informatics_iedc_cse_pic.png" alt="Bio-Informatics Hackathon IEM"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                           <div><a href="img/award_bio_informatics_iedc_cse_cert.png" data-lightbox="bioinfo-hack" data-title="Bio-Informatics Hackathon Certificate"><img src="img/award_bio_informatics_iedc_cse_cert.png" alt="Bio-Informatics Hackathon Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-brain ach-icon-inline"></i>3rd - Bio-Informatics Big Data Analytics Hackathon - IEDC CSE, IEM</h4>
+                            <p>July 2024.</p>
+                            <span class="ach-type-tag">College Level</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-brain ach-icon"></i>
-                        <h4>3rd - Bio-Informatics Big Data Analytics Hackathon - IEDC CSE, IEM</h4>
-                        <p>July 2024.</p>
-                        <span class="ach-type-tag">College Level</span>
+                         <div class="achievement-image-album auto-scroll-hover small-album">
+                            <div><a href="img/award_bengal_e_summit_pic1.png" data-lightbox="bengal-esummit" data-title="Bengal E-Summit Pic 1"><img src="img/award_bengal_e_summit_pic1.png" alt="Bengal E-Summit IEM"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_bengal_e_summit_pic2.png" data-lightbox="bengal-esummit" data-title="Bengal E-Summit Pic 2"><img src="img/award_bengal_e_summit_pic2.png" alt="Bengal E-Summit IEM"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_bengal_e_summit_cert1.png" data-lightbox="bengal-esummit" data-title="Bengal E-Summit Certificate 1"><img src="img/award_bengal_e_summit_cert1.png" alt="Bengal E-Summit Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_bengal_e_summit_cert2.png" data-lightbox="bengal-esummit" data-title="Bengal E-Summit Certificate 2"><img src="img/award_bengal_e_summit_cert2.png" alt="Bengal E-Summit Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-store ach-icon-inline"></i>WINNER - Start-Up Expo & Pitch Perfect - Bengal E-Summit 2024, IEM</h4>
+                            <p>July 2024.</p>
+                            <span class="ach-type-tag">College Level</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-store ach-icon"></i>
-                        <h4>WINNER - Start-Up Expo & Pitch Perfect - Bengal E-Summit 2024, IEM</h4>
-                        <p>July 2024.</p>
-                        <span class="ach-type-tag">College Level</span>
+                        <div class="achievement-image-album auto-scroll-hover small-album">
+                            <div><a href="img/award_aisc_2024_bst_pstr_pic.png" data-lightbox="aisc-poster-2" data-title="AISC Poster Pic"><img src="img/award_aisc_2024_bst_pstr_pic.png" alt="AISC Best Poster"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_aisc_2024_bst_pstr_cert.png" data-lightbox="aisc-poster-2" data-title="AISC Poster Cert"><img src="img/award_aisc_2024_bst_pstr_cert.png" alt="AISC Best Poster Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-image ach-icon-inline"></i>Best Poster - Intl. Conf. on AI & Sustainable Computing (AISC 2024)</h4>
+                            <p>June 2024.</p>
+                            <span class="ach-type-tag">Intl. Conference</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-image ach-icon"></i>
-                        <h4>Best Poster - Intl. Conf. on AI & Sustainable Computing (AISC 2024)</h4>
-                        <p>June 2024.</p>
-                        <span class="ach-type-tag">Intl. Conference</span>
+                         <div class="achievement-image-album auto-scroll-hover small-album">
+                            <div><a href="img/award_innovacion_2024_pic.png" data-lightbox="innovare-24" data-title="Innovare 2024 Pic"><img src="img/award_innovacion_2024_pic.png" alt="Innovare INNOVACION 2024"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_innovacion_2024_proj.png" data-lightbox="innovare-24" data-title="Innovare 2024 Project"><img src="img/award_innovacion_2024_proj.png" alt="Innovare 2024 Project"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                            <div><a href="img/award_innovacion_2024_cert.png" data-lightbox="innovare-24" data-title="Innovare 2024 Certificate"><img src="img/award_innovacion_2024_cert.png" alt="Innovare INNOVACION Certificate"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-cogs ach-icon-inline"></i>WINNER - Innovare, INNOVACION 2024 (Annual College Tech-Fest)</h4>
+                            <p>March 2024.</p>
+                            <span class="ach-type-tag">College Level</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-cogs ach-icon"></i>
-                        <h4>WINNER - Innovare, INNOVACION 2024 (Annual College Tech-Fest)</h4>
-                        <p>March 2024.</p>
-                        <span class="ach-type-tag">College Level</span>
+                         <div class="achievement-image-album auto-scroll-hover small-album">
+                            <div><a href="img/award_innovacion_electroslides_2024_cert.png" data-lightbox="electroslides-24" data-title="Electroslides Certificate"><img src="img/award_innovacion_electroslides_2024_cert.png" alt="Electroslides INNOVACION 2024"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-plug ach-icon-inline"></i>1st Runner Up, Electroslides, INNOVACION 2024</h4>
+                            <p>Feb 2024.</p>
+                            <span class="ach-type-tag">College Level</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-plug ach-icon"></i>
-                        <h4>1st Runner Up, Electroslides, INNOVACION 2024</h4>
-                        <p>Feb 2024.</p>
-                        <span class="ach-type-tag">College Level</span>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-graduation-cap ach-icon-inline"></i>5th Rank in CSE, Rank Certificate Ceremony, IEM</h4>
+                            <p>Feb 2024.</p>
+                            <span class="ach-type-tag">Academic</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-graduation-cap ach-icon"></i>
-                        <h4>5th Rank in CSE, Rank Certificate Ceremony, IEM</h4>
-                        <p>Feb 2024.</p>
-                        <span class="ach-type-tag">Academic</span>
-                    </div>
-                    <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-leaf ach-icon"></i>
-                        <h4>WINNER - Green technology track, IEEE WIE Hackathon 2023</h4>
-                        <p>Aug 2023. Jadavpur University. Solution: Tribo-electric Nano-generator.</p>
-                        <span class="ach-type-tag">University Level</span>
+                        <div class="achievement-image-album auto-scroll-hover small-album">
+                           <div><a href="img/award_ieee_wie_2023_cert.jpg" data-lightbox="ieee-wie" data-title="IEEE WIE Hackathon Certificate"><img src="img/award_ieee_wie_2023_cert.jpg" alt="IEEE WIE Hackathon"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-leaf ach-icon-inline"></i>WINNER - Green technology track, IEEE WIE Hackathon 2023</h4>
+                            <p>Aug 2023. Jadavpur University. Solution: Tribo-electric Nano-generator.</p>
+                            <span class="ach-type-tag">University Level</span>
+                        </div>
                     </div>
                      <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-globe-americas ach-icon"></i>
-                        <h4>Global Jury Validation and RV Certificate, Wadhwani NEN</h4>
-                        <p>July 2023. Certification of Practice Entrepreneurial Venture as Real Venture.</p>
-                        <span class="ach-type-tag">Entrepreneurship</span>
+                        <div class="other-ach-content">
+                           <h4> <i class="fas fa-globe-americas ach-icon-inline"></i>Global Jury Validation and RV Certificate, Wadhwani NEN</h4>
+                            <p>July 2023. Certification of Practice Entrepreneurial Venture as Real Venture.</p>
+                            <span class="ach-type-tag">Entrepreneurship</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-lightbulb ach-icon"></i>
-                        <h4>2nd - Ideathon, Elevate 2023 (IEEE SB Event)</h4>
-                        <p>April 2023. Annual College Tech-Fest, Innovative Project Exhibition.</p>
-                        <span class="ach-type-tag">College Level</span>
+                        <div class="achievement-image-album auto-scroll-hover small-album">
+                            <div><a href="img/award_elevate_2023_ideathon_cert.png" data-lightbox="elevate-23" data-title="Elevate 2023 Certificate"><img src="img/award_elevate_2023_ideathon_cert.png" alt="Ideathon Elevate 2023"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-lightbulb ach-icon-inline"></i>2nd - Ideathon, Elevate 2023 (IEEE SB Event)</h4>
+                            <p>April 2023. Annual College Tech-Fest, Innovative Project Exhibition.</p>
+                            <span class="ach-type-tag">College Level</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-tools ach-icon"></i>
-                        <h4>1st Runner Up, INNOVACION 2023 (Annual College Tech-Fest)</h4>
-                        <p>March 2023. Project: Plastic Refill Recycler.</p>
-                        <span class="ach-type-tag">College Level</span>
+                        <div class="achievement-image-album auto-scroll-hover small-album">
+                           <div><a href="img/award_innovacion_2023_cert.png" data-lightbox="innovacion-23-runnerup" data-title="INNOVACION 2023 Runner Up Certificate"><img src="img/award_innovacion_2023_cert.png" alt="INNOVACION 2023 Runner Up"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-tools ach-icon-inline"></i>1st Runner Up, INNOVACION 2023 (Annual College Tech-Fest)</h4>
+                            <p>March 2023. Project: Plastic Refill Recycler.</p>
+                            <span class="ach-type-tag">College Level</span>
+                        </div>
                     </div>
                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
-                        <i class="fas fa-chalkboard-teacher ach-icon"></i>
-                        <h4>Special Project & Poster Recognition, INNOVACION 2023</h4>
-                        <p>March 2023. 4 Technical projects exhibited.</p>
-                        <span class="ach-type-tag">College Level</span>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-chalkboard-teacher ach-icon-inline"></i>Special Project & Poster Recognition, INNOVACION 2023</h4>
+                            <p>March 2023. 4 Technical projects exhibited.</p>
+                            <span class="ach-type-tag">College Level</span>
+                        </div>
+                    </div>
+                     <div class="other-achievement-item animate-on-scroll pop-in stagger-item">
+                        <div class="achievement-image-album auto-scroll-hover small-album">
+                           <div><a href="img/award_smart_makers_fest_2023_cert.png" data-lightbox="smart-makers" data-title="Smart Makers Fest Certificate"><img src="img/award_smart_makers_fest_2023_cert.png" alt="Smart Makers Fest"><span class="enlarge-icon-overlay"><i class="fas fa-search-plus"></i></span></a></div>
+                        </div>
+                        <div class="other-ach-content">
+                            <h4><i class="fas fa-star ach-icon-inline"></i>Certificate of Appreciation - Smart Makers Fest 2023</h4>
+                            <p>(Date not specified in filename) - For project showcase.</p>
+                            <span class="ach-type-tag">College Level</span>
+                        </div>
                     </div>
                 </div>
                 
@@ -618,19 +755,34 @@
                 <h3 class="sub-section-title animate-on-scroll fade-in-up">Publications</h3>
                 <ul class="detailed-list stagger-children publications-list">
                     <li class="animate-on-scroll pop-in stagger-item">
-                        <span class="publication-title">"Spatial Pattern Analysis of Aerial Imagery with Improved Pyramid Scene Parsing Network"</span>
+                        <div class="publication-header">
+                            <span class="publication-title">"Spatial Pattern Analysis of Aerial Imagery with Improved Pyramid Scene Parsing Network"</span>
+                            <a href="img/icdc_2025_presenter_cert.png" data-lightbox="pub-icdc" data-title="ICDC 2025 Presenter Certificate" class="pub-cert-link"><i class="fas fa-certificate"></i> View Cert</a>
+                        </div>
                         <p class="publication-details">Co-Author. Presented at 3rd International Conference on Computational Intelligence, Data Science and Cloud Computing (IEM-ICDC 2025), IEM, Kolkata (April 11-12, 2025). Authors: S. Kundu, A. Ghosh, A. Haldar, Dr. A. Das Bhattacharjee.</p>
                     </li>
                      <li class="animate-on-scroll pop-in stagger-item">
-                        <span class="publication-title">"Designing and Implementing an IoT-Based Long-Distance Fire-Extinguishment System 'Stationary 3-Axis Fire-Emergency Response Base'"</span>
+                        <div class="publication-header">
+                            <span class="publication-title">"Designing and Implementing an IoT-Based Long-Distance Fire-Extinguishment System 'Stationary 3-Axis Fire-Emergency Response Base'"</span>
+                             <div class="pub-cert-album">
+                                <a href="img/iementech_2025_authorship_cert.png" data-lightbox="pub-iementech" data-title="IEMENTech Authorship Cert" class="pub-cert-link"><i class="fas fa-certificate"></i> Authorship</a>
+                                <a href="img/iementech_2025_presenter_cert.png" data-lightbox="pub-iementech" data-title="IEMENTech Presenter Cert" class="pub-cert-link"><i class="fas fa-user-tie"></i> Presenter</a>
+                            </div>
+                        </div>
                         <p class="publication-details">Author. International Conference on Electronics, Materials Engineering and Nano Technology (Jan 31-Feb 2, 2025). Authors: S. Kundu, S. Dey, Md. M. Abdullha, Dr. G. Sen, Dr. M. Gangopadhyay. <a href="https://doi.org/10.1109/IEMENTech65115.2025.10959508" target="_blank" rel="noopener noreferrer">DOI: 10.1109/IEMENTech65115.2025.10959508</a></p>
                     </li>
                     <li class="animate-on-scroll pop-in stagger-item">
-                        <span class="publication-title">"Improving Driving Information Interfaceability among vehicles through an Online V2V Dashboard"</span>
+                         <div class="publication-header">
+                            <span class="publication-title">"Improving Driving Information Interfaceability among vehicles through an Online V2V Dashboard"</span>
+                            <a href="img/irtm_2024_presenter_cert.png" data-lightbox="pub-irtm" data-title="IRTM 2024 Presenter Certificate" class="pub-cert-link"><i class="fas fa-certificate"></i> View Cert</a>
+                        </div>
                         <p class="publication-details">Author. Interdisciplinary Research in Technology & Management (Dec 5-7, 2024). PAPERID-1571087416 (Communications Track). Authors: S. Kundu, K. Khan, Dr. S. Sarkar.</p>
                     </li>
                     <li class="animate-on-scroll pop-in stagger-item">
-                        <span class="publication-title">"Testing Applicability of PSPNet for Semantic Edge Detection and Segmentation of Satellite Images"</span>
+                         <div class="publication-header">
+                            <span class="publication-title">"Testing Applicability of PSPNet for Semantic Edge Detection and Segmentation of Satellite Images"</span>
+                            <a href="img/award_aisc_2024_bst_pstr_cert.png" data-lightbox="pub-aisc" data-title="AISC 2024 Best Poster Cert (related)" class="pub-cert-link"><i class="fas fa-certificate"></i> View Cert</a>
+                        </div>
                         <p class="publication-details">Co-Author. Artificial intelligence & Sustainable Computing (July 11-13, 2024). PAPERID-83 (Machine Learning & Sustainable Computing Track). Authors: A. Ghosh, S. Kundu, A. Haldar, A. Das Bhattacharjee.</p>
                     </li>
                 </ul>
@@ -641,105 +793,102 @@
             <div class="container">
                 <h2 class="section-title animate-on-scroll fade-in-up">My Certifications</h2>
                 <div class="certifications-grid stagger-children">
-                    <div class="certification-card animate-on-scroll pop-in stagger-item nptel-elite gold">
-                        <div class="certification-image-wrapper"><img src="img/nptel_cert_industry40.png" alt="NPTEL Industry 4.0"></div>
-                        <div class="certification-info"><h3>NPTEL - Introduction To Industry 4.0 And Industrial Internet Of Things</h3><p class="cert-score">Score: 86% <span class="cert-date">(Jan-Apr 2025)</span></p><p class="cert-issuer">IIT Kharagpur <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
+                    <!-- Certification Card Example (repeat for others) -->
                     <div class="certification-card animate-on-scroll pop-in stagger-item nptel-elite silver">
-                        <div class="certification-image-wrapper"><img src="img/nptel_cert_cn.png" alt="NPTEL Computer Networks"></div>
-                        <div class="certification-info"><h3>NPTEL - Computer Networks and Internet Protocol</h3><p class="cert-score">Score: 75% <span class="cert-date">(Jan-Apr 2024)</span></p><p class="cert-issuer">IIT Kharagpur <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS19S35970072330725080" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
+                        <a href="https://internalapp.nptel.ac.in/noc/Ecertificate/?q=NPTEL25CS43S64950243204339123" target="_blank" rel="noopener noreferrer" class="certification-link-wrapper">
+                            <div class="certification-image-wrapper"><img src="img/nptel_cert_industry40.png" alt="NPTEL Industry 4.0">
+                                <div class="verify-overlay"><i class="fas fa-check-circle"></i> Click to Verify</div>
+                            </div>
+                        </a>
+                        <div class="certification-info"><h3>NPTEL - Introduction To Industry 4.0 And Industrial Internet Of Things</h3><p class="cert-score">Score: 86% <span class="cert-date">(Jan-Apr 2025)</span></p><p class="cert-issuer">IIT Kharagpur</p></div>
+                    </div>
+                     <div class="certification-card animate-on-scroll pop-in stagger-item nptel-elite silver">
+                         <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS19S35970072330725080" target="_blank" rel="noopener noreferrer" class="certification-link-wrapper">
+                            <div class="certification-image-wrapper"><img src="img/nptel_cert_cn.png" alt="NPTEL Computer Networks">
+                                <div class="verify-overlay"><i class="fas fa-check-circle"></i> Click to Verify</div>
+                            </div>
+                        </a>
+                        <div class="certification-info"><h3>NPTEL - Computer Networks and Internet Protocol</h3><p class="cert-score">Score: 75% <span class="cert-date">(Jan-Apr 2024)</span></p><p class="cert-issuer">IIT Kharagpur</p></div>
                     </div>
                      <div class="certification-card animate-on-scroll pop-in stagger-item nptel-elite">
-                        <div class="certification-image-wrapper"><img src="img/nptel_cert_ev.png" alt="NPTEL Electric Vehicles"></div>
-                        <div class="certification-info"><h3>NPTEL - Electric Vehicles - Part 1</h3><p class="cert-score">Score: 65% <span class="cert-date">(Jan-Feb 2023)</span></p><p class="cert-issuer">IIT Madras <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL23EE01S4493103603113968" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
+                        <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL23EE01S4493103603113968" target="_blank" rel="noopener noreferrer" class="certification-link-wrapper">
+                            <div class="certification-image-wrapper"><img src="img/nptel_cert_ev.png" alt="NPTEL Electric Vehicles">
+                                <div class="verify-overlay"><i class="fas fa-check-circle"></i> Click to Verify</div>
+                            </div>
+                        </a>
+                        <div class="certification-info"><h3>NPTEL - Electric Vehicles - Part 1</h3><p class="cert-score">Score: 65% <span class="cert-date">(Jan-Feb 2023)</span></p><p class="cert-issuer">IIT Madras</p></div>
                     </div>
                     <div class="certification-card animate-on-scroll pop-in stagger-item nptel-elite">
-                        <div class="certification-image-wrapper"><img src="img/nptel_cert_ml.png" alt="NPTEL Machine Learning"></div>
-                        <div class="certification-info"><h3>NPTEL - Introduction to Machine Learning</h3><p class="cert-score">Score: 64% <span class="cert-date">(Jan-Apr 2025)</span></p><p class="cert-issuer">IIT Madras <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
+                         <a href="#" target="_blank" rel="noopener noreferrer" class="certification-link-wrapper"> <!-- Add actual link -->
+                            <div class="certification-image-wrapper"><img src="img/nptel_cert_ml.png" alt="NPTEL Machine Learning">
+                                <div class="verify-overlay"><i class="fas fa-check-circle"></i> Click to Verify</div>
+                            </div>
+                        </a>
+                        <div class="certification-info"><h3>NPTEL - Introduction to Machine Learning</h3><p class="cert-score">Score: 64% <span class="cert-date">(Jan-Apr 2025)</span></p><p class="cert-issuer">IIT Madras</p></div>
                     </div>
                     <div class="certification-card animate-on-scroll pop-in stagger-item nptel-elite">
-                        <div class="certification-image-wrapper"><img src="img/nptel_cert_dbms.png" alt="NPTEL DBMS"></div>
-                        <div class="certification-info"><h3>NPTEL - Data Base Management System</h3><p class="cert-score">Score: 61% <span class="cert-date">(Jan-Mar 2023)</span></p><p class="cert-issuer">IIT Kharagpur <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL23CS41S3493063003113968" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
+                        <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL23CS41S3493063003113968" target="_blank" rel="noopener noreferrer" class="certification-link-wrapper">
+                            <div class="certification-image-wrapper"><img src="img/nptel_cert_dbms.png" alt="NPTEL DBMS">
+                                <div class="verify-overlay"><i class="fas fa-check-circle"></i> Click to Verify</div>
+                            </div>
+                        </a>
+                        <div class="certification-info"><h3>NPTEL - Data Base Management System</h3><p class="cert-score">Score: 61% <span class="cert-date">(Jan-Mar 2023)</span></p><p class="cert-issuer">IIT Kharagpur</p></div>
                     </div>
                     <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/nptel_cert_cv_apps.png" alt="NPTEL Computer Vision Apps"></div>
-                        <div class="certification-info"><h3>NPTEL - Computer Vision and Image Processing - Fundamentals and Applications</h3><p class="cert-score">Score: 49% <span class="cert-date">(Jan-Apr 2024)</span></p><p class="cert-issuer">IIT Guwahati <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24EE38S45970104030725080" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
+                         <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24EE38S45970104030725080" target="_blank" rel="noopener noreferrer" class="certification-link-wrapper">
+                            <div class="certification-image-wrapper"><img src="img/nptel_cert_cv_apps.png" alt="NPTEL Computer Vision Apps">
+                                <div class="verify-overlay"><i class="fas fa-check-circle"></i> Click to Verify</div>
+                            </div>
+                        </a>
+                        <div class="certification-info"><h3>NPTEL - Computer Vision and Image Processing - Fundamentals and Applications</h3><p class="cert-score">Score: 49% <span class="cert-date">(Jan-Apr 2024)</span></p><p class="cert-issuer">IIT Guwahati</p></div>
                     </div>
                     <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_cybersecurity_foundations.png" alt="Cybersecurity Foundations"></div>
-                        <div class="certification-info"><h3>Foundations of Cybersecurity</h3><p class="cert-issuer">Coursera (Google) <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                    <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_agile_dev_practices.png" alt="Agile Development"></div>
-                        <div class="certification-info"><h3>Agile Development Practices</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                    <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_agile_project_leadership.png" alt="Agile Project Leadership"></div>
-                        <div class="certification-info"><h3>Agile Project Leadership</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                    <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_android_dev_essential.png" alt="Android Dev Essential"></div>
-                        <div class="certification-info"><h3>Android Development Essential Training: Your First App</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                    <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_circular_economy.png" alt="Circular Economy"></div>
-                        <div class="certification-info"><h3>Circular Economy Business Strategies</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                    <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_cisco_networking.png" alt="Cisco Networking"></div>
-                        <div class="certification-info"><h3>Cisco Networking Foundations: Fundamentals</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                    <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_digital_marketing.png" alt="Digital Marketing Foundations"></div>
-                        <div class="certification-info"><h3>Digital Marketing Foundations</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                    <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_ethics_gen_ai.png" alt="Ethics Gen AI"></div>
-                        <div class="certification-info"><h3>Ethics in the Age of Generative AI</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/J14ZK9MJ4Y8K" target="_blank" rel="noopener noreferrer" class="certification-link-wrapper">
+                            <div class="certification-image-wrapper"><img src="img/cert_cybersecurity_foundations.png" alt="Cybersecurity Foundations">
+                                <div class="verify-overlay"><i class="fas fa-check-circle"></i> Click to Verify</div>
+                            </div>
+                        </a>
+                        <div class="certification-info"><h3>Foundations of Cybersecurity</h3><p class="cert-issuer">Coursera (Google)</p></div>
                     </div>
                      <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_intro_esg.png" alt="Intro ESG"></div>
-                        <div class="certification-info"><h3>Introduction to ESG: Environmental, Social, and Governance</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
+                         <a href="https://www.coursera.org/account/accomplishments/verify/X6KPGYWH746Z" target="_blank" rel="noopener noreferrer" class="certification-link-wrapper">
+                            <div class="certification-image-wrapper"><img src="img/cert_canva_promo_video.png" alt="Canva Promo Video">
+                                <div class="verify-overlay"><i class="fas fa-check-circle"></i> Click to Verify</div>
+                            </div>
+                        </a>
+                        <div class="certification-info"><h3>Create a Promotional Video using Canva</h3><p class="cert-issuer">Coursera Project Network</p></div>
                     </div>
                     <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_java_collections.png" alt="Java Collections"></div>
-                        <div class="certification-info"><h3>Learning Java Collections</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
+                         <a href="https://www.coursera.org/account/accomplishments/verify/8Z53DBGWA9VM" target="_blank" rel="noopener noreferrer" class="certification-link-wrapper">
+                            <div class="certification-image-wrapper"><img src="img/cert_google_ads_beginners.png" alt="Google Ads Beginners">
+                                <div class="verify-overlay"><i class="fas fa-check-circle"></i> Click to Verify</div>
+                            </div>
+                        </a>
+                        <div class="certification-info"><h3>Google Ads for Beginners</h3><p class="cert-issuer">Coursera Project Network</p></div>
                     </div>
                     <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_prog_discrete_math.png" alt="Discrete Math"></div>
-                        <div class="certification-info"><h3>Programming Foundations: Discrete Mathematics</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
+                         <a href="https://www.coursera.org/account/accomplishments/verify/PERH9TU8FWEX" target="_blank" rel="noopener noreferrer" class="certification-link-wrapper">
+                            <div class="certification-image-wrapper"><img src="img/cert_intro_data_analysis_ms.png" alt="Data Analysis Microsoft">
+                                <div class="verify-overlay"><i class="fas fa-check-circle"></i> Click to Verify</div>
+                            </div>
+                        </a>
+                        <div class="certification-info"><h3>Introduction to Data Analysis using Microsoft Excel</h3><p class="cert-issuer">Coursera Project Network</p></div>
                     </div>
                     <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_prog_comp_hardware.png" alt="Computing Hardware"></div>
-                        <div class="certification-info"><h3>Programming Foundations: Inside Computing Hardware</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                    <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_proj_mgmt_integration.png" alt="Project Management"></div>
-                        <div class="certification-info"><h3>Project Management Foundations: Integration</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                    <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_ux_style_guides.png" alt="UX Style Guides"></div>
-                        <div class="certification-info"><h3>UX Foundations: Style Guides and Design Systems</h3><p class="cert-issuer">LinkedIn Learning <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
+                         <a href="https://www.coursera.org/account/accomplishments/verify/ZRX9DZQF5XAE" target="_blank" rel="noopener noreferrer" class="certification-link-wrapper">
+                            <div class="certification-image-wrapper"><img src="img/cert_seo_beginner.png" alt="SEO Beginners">
+                                <div class="verify-overlay"><i class="fas fa-check-circle"></i> Click to Verify</div>
+                            </div>
+                        </a>
+                        <div class="certification-info"><h3>Search Engine Optimization (SEO) with Squarespace</h3><p class="cert-issuer">Coursera Project Network</p></div>
                     </div>
                      <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_canva_promo_video.png" alt="Canva Promo Video"></div>
-                        <div class="certification-info"><h3>Create a Promotional Video using Canva</h3><p class="cert-issuer">Coursera Project Network <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                    <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_google_ads_beginners.png" alt="Google Ads Beginners"></div>
-                        <div class="certification-info"><h3>Google Ads for Beginners</h3><p class="cert-issuer">Coursera Project Network <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                    <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_intro_data_analysis_ms.png" alt="Data Analysis Microsoft"></div>
-                        <div class="certification-info"><h3>Introduction to Data Analysis using Microsoft Excel</h3><p class="cert-issuer">Coursera Project Network <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                    <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_seo_beginner.png" alt="SEO Beginners"></div>
-                        <div class="certification-info"><h3>Search Engine Optimization (SEO) with Squarespace</h3><p class="cert-issuer">Coursera Project Network <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
-                    </div>
-                     <div class="certification-card animate-on-scroll pop-in stagger-item">
-                        <div class="certification-image-wrapper"><img src="img/cert_canva_course_collateral.png" alt="Canva Course Collateral"></div>
-                        <div class="certification-info"><h3>Use Canva to Design Digital Course Collateral</h3><p class="cert-issuer">Coursera Project Network <a href="#" target="_blank" rel="noopener noreferrer" class="verify-link">(Verify)</a></p></div>
+                         <a href="https://www.coursera.org/account/accomplishments/verify/7RWSN9T35ECM" target="_blank" rel="noopener noreferrer" class="certification-link-wrapper">
+                            <div class="certification-image-wrapper"><img src="img/cert_canva_course_collateral.png" alt="Canva Course Collateral">
+                                <div class="verify-overlay"><i class="fas fa-check-circle"></i> Click to Verify</div>
+                            </div>
+                        </a>
+                        <div class="certification-info"><h3>Use Canva to Design Digital Course Collateral</h3><p class="cert-issuer">Coursera Project Network</p></div>
                     </div>
                 </div>
             </div>
@@ -749,115 +898,183 @@
             <div class="container">
                  <h2 class="section-title animate-on-scroll fade-in-up">My Technical Arsenal & Proficiencies</h2>
                  <div class="skills-grid">
- 
-                     <div class="skill-category-card animate-on-scroll pop-in delay-1">
-                         <h3><i class="fas fa-brain"></i> Machine Learning, AI & Data Science</h3>
-                         <ul class="skill-items-list">
-                             <li><span class="skill-tag"><i class="fas fa-chart-pie"></i> Image Segmentation (PSPNet):</span>
+                     <div class="skill-category-card animate-on-scroll pop-in-bouncy delay-1">
+                         <h3><i class="fas fa-brain skill-category-icon"></i> Machine Learning, AI & Data Science</h3>
+                         <div class="skills-content-wrapper">
+                             <div class="skill-item-group">
+                                 <span class="skill-sub-category-pill orange"><i class="fas fa-cogs"></i> Image Segmentation (PSPNet):</span>
                                  <ul class="nested-skill-list">
                                      <li>Core Model Development & Modification</li>
-                                     <li>Testing & Metrics Implementation (IoU, Dice, SSIM, MAE)</li>
+                                     <li>Testing & Metrics Implementation (IoU, Dice, SSIM, MAI)</li>
                                  </ul>
-                             </li>
-                             <li><span class="skill-tag"><i class="fas fa-cogs"></i> ML Model Implementation:</span>
+                             </div>
+                             <div class="skill-item-group">
+                                 <span class="skill-sub-category-pill orange"><i class="fas fa-layer-group"></i> ML Model Implementation:</span>
                                  <ul class="nested-skill-list">
                                      <li>Heart Disease Prediction</li>
                                      <li>Diabetes, House Price, Titanic Survival Prediction</li>
+                                     <li>Image Classification (Horse/Human)</li>
                                  </ul>
-                             </li>
-                             <li><span class="skill-tag-text">Libraries:</span> <span class="lib-tag"><i class="fas fa-code"></i> Scikit-learn</span>, <span class="lib-tag"><i class="fas fa-table"></i> Pandas</span>, <span class="lib-tag"><i class="fas fa-calculator"></i> NumPy</span></li>
-                             <li><span class="skill-tag-text">Visualization:</span> <span class="lib-tag"><i class="fas fa-chart-bar"></i> Matplotlib</span>, <span class="lib-tag"><i class="fas fa-palette"></i> Seaborn</span></li>
-                             <li><span class="skill-tag-text"><i class="fab fa-teamspeak"></i> TensorFlow/Keras (Conceptual for PSPNet)</span></li>
-                         </ul>
+                             </div>
+
+                             <div class="skill-tags-container individual-tags">
+                                 <span class="skill-pill-tag blue"><i class="fab fa-python"></i> Scikit-learn</span>
+                                 <span class="skill-pill-tag blue"><i class="fab fa-python"></i> Pandas</span>
+                                 <span class="skill-pill-tag blue"><i class="fab fa-python"></i> NumPy</span>
+                                 <span class="skill-pill-tag blue"><i class="fas fa-chart-bar"></i> Matplotlib</span>
+                                 <span class="skill-pill-tag blue"><i class="fas fa-chart-line"></i> Seaborn</span>
+                                 <span class="skill-pill-tag blue"><i class="fas fa-brain"></i> TensorFlow/Keras <span class="skill-tag-note">(Conceptual/Applied)</span></span>
+                             </div>
+                         </div>
                      </div>
  
-                     <div class="skill-category-card animate-on-scroll pop-in delay-2">
-                         <h3><i class="fas fa-microchip"></i> Embedded Systems (Arduino & STM32)</h3>
-                         <ul class="skill-items-list">
-                             <li><span class="skill-tag"><i class="fas fa-robot"></i> Arduino (Uno, Mega)</span>, <span class="skill-tag"><i class="fas fa-robot"></i> STM32 (CubeMX)</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-drafting-compass"></i> Circuit Design & Prototyping</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-sliders-h"></i> Sensor Integration & Control</span></li>
-                             <li><span class="skill-tag-text">Core Libs:</span> <span class="lib-tag">Arduino.h</span>, <span class="lib-tag">Wire.h (I2C)</span>, <span class="lib-tag">SPI.h</span></li>
-                             <li><span class="skill-tag-text">Display/UI:</span> <span class="lib-tag">Adafruit_GFX.h</span>, <span class="lib-tag">Adafruit_SH1106/SSD1306 (OLED)</span></li>
-                             <li><span class="skill-tag-text">Input:</span> <span class="lib-tag">I2CKeyPad.h</span>, <span class="lib-tag">SoftwareSerial.h</span></li>
-                             <li><span class="skill-tag-text">Memory:</span> <span class="lib-tag">EEPROM.h</span></li>
-                             <li><span class="skill-tag-text">Actuation:</span> <span class="lib-tag">Servo.h</span></li>
-                             <li><span class="skill-tag-text">Sensors Specific:</span> <span class="lib-tag">MAX6675 (Temp)</span>, <span class="lib-tag">MQ135/MQ2 (Gas)</span></li>
-                             <li><span class="skill-tag-text">Location/ID:</span> <span class="lib-tag">TinyGPS++.h</span>, <span class="lib-tag">Adafruit_PN532 (RFID)</span></li>
-                         </ul>
+                     <div class="skill-category-card animate-on-scroll pop-in-bouncy delay-2">
+                         <h3><i class="fas fa-microchip skill-category-icon"></i> Embedded Systems (Arduino & STM32)</h3>
+                         <div class="skills-content-wrapper">
+                            <div class="skill-tags-container">
+                                <span class="skill-pill-tag blue"><i class="fas fa-microchip"></i> Arduino (Uno, Mega)</span>
+                                <span class="skill-pill-tag blue"><i class="fas fa-cogs"></i> STM32 (CubeMX)</span>
+                                <span class="skill-pill-tag blue"><i class="fas fa-drafting-compass"></i> Circuit Design & Prototyping</span>
+                                <span class="skill-pill-tag blue"><i class="fas fa-sliders-h"></i> Sensor Integration & Control</span>
+                            </div>
+
+                            <div class="skill-group-texted">
+                                <strong>Core Libs:</strong> Arduino.h Wire.h SPI.h
+                            </div>
+                            <div class="skill-group-texted">
+                                <strong>Display/UI:</strong> Adafruit_GFX Adafruit_SH1106/SSD1306 (OLED)
+                            </div>
+                            <div class="skill-group-texted">
+                                <strong>Input/Memory:</strong> I2CKeyPad SoftwareSerial EEPROM
+                            </div>
+                            <div class="skill-group-texted">
+                                <strong>Actuation/Sensors:</strong> Servo MAX6675 MQ135/MQ2
+                            </div>
+                             <div class="skill-group-texted">
+                                <strong>Location/ID:</strong> TinyGPS++ Adafruit_PN532 (RFID)
+                            </div>
+                         </div>
                      </div>
                      
-                     <div class="skill-category-card animate-on-scroll pop-in delay-3">
-                         <h3><i class="fas fa-wifi"></i> Internet of Things (ESP32 & ESP8266)</h3>
-                          <ul class="skill-items-list">
-                             <li><span class="skill-tag"><i class="fab fa-raspberry-pi"></i> ESP32</span>, <span class="skill-tag"><i class="fab fa-raspberry-pi"></i> ESP8266</span></li>
-                             <li><span class="skill-tag-text">Connectivity:</span> <span class="lib-tag">ESP32WiFi.h</span>, <span class="lib-tag">WiFi.h</span></li>
-                             <li><span class="skill-tag-text">Peer-to-Peer:</span> <span class="lib-tag">esp_now.h</span></li>
-                             <li><span class="skill-tag-text">Messaging:</span> <span class="lib-tag">WiFiUdp.h</span>, <span class="lib-tag">PubSubClient.h (MQTT)</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-server"></i> HiveMQ MQTT Broker</span></li>
-                             <li><span class="skill-tag-text">Data Format:</span> <span class="lib-tag">ArduinoJson.h</span></li>
-                             <li><span class="skill-tag-text">HTTP Comms:</span> <span class="lib-tag">HTTPClient.h</span>, <span class="lib-tag">WiFiClient.h</span></li>
-                         </ul>
+                     <div class="skill-category-card animate-on-scroll pop-in-bouncy delay-3">
+                         <h3><i class="fas fa-wifi skill-category-icon"></i> Internet of Things (ESP32 & ESP8266)</h3>
+                          <div class="skills-content-wrapper">
+                            <div class="skill-tags-container">
+                                <span class="skill-pill-tag blue"><i class="fas fa-wifi"></i> ESP32</span>
+                                <span class="skill-pill-tag blue"><i class="fas fa-wifi"></i> ESP8266</span>
+                                <span class="skill-pill-tag blue"><i class="fas fa-server"></i> HiveMQ MQTT Broker</span>
+                            </div>
+                            <div class="skill-group-texted">
+                                <strong>Connectivity:</strong> ESP32WiFi WiFi.h
+                            </div>
+                            <div class="skill-group-texted">
+                                <strong>P2P/Messaging:</strong> esp_now WiFiUdp PubSubClient (MQTT)
+                            </div>
+                            <div class="skill-group-texted">
+                                <strong>Data/HTTP:</strong> ArduinoJson HTTPClient WiFiClient
+                            </div>
+                          </div>
                      </div>
  
-                     <div class="skill-category-card animate-on-scroll pop-in delay-1">
-                         <h3><i class="fas fa-cloud"></i> Cloud Computing (AWS)</h3>
-                         <ul class="skill-items-list">
-                             <li><span class="skill-tag"><i class="fab fa-aws"></i> AWS SageMaker</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-cloud-upload-alt"></i> Foundational Cloud ML Concepts</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-server"></i> EC2 Instance Creation & Mgmt</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-database"></i> S3 Storage Setup & Mgmt</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-users-cog"></i> IAM & Root User Accounts</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-globe"></i> Static Site Hosting (S3)</span></li>
-                         </ul>
+                     <div class="skill-category-card animate-on-scroll pop-in-bouncy delay-1">
+                         <h3><i class="fab fa-aws skill-category-icon"></i> Cloud Computing (AWS)</h3> <!-- Changed to fab fa-aws -->
+                         <div class="skills-content-wrapper">
+                            <div class="skill-tags-container">
+                                 <span class="skill-pill-tag blue"><i class="fab fa-aws"></i> AWS SageMaker</span>
+                                 <span class="skill-pill-tag blue"><i class="fas fa-cloud-upload-alt"></i> Foundational Cloud ML Concepts</span>
+                                 <span class="skill-pill-tag blue"><i class="fas fa-server"></i> EC2 Instance Mgmt</span> <!-- Generic server icon for EC2 -->
+                                 <span class="skill-pill-tag blue"><i class="fas fa-database"></i> S3 Storage Mgmt</span> <!-- Generic database/storage icon for S3 -->
+                                 <span class="skill-pill-tag blue"><i class="fas fa-users-cog"></i> IAM & Root User Accounts</span>
+                                 <span class="skill-pill-tag blue"><i class="fas fa-globe"></i> Static Site Hosting (S3)</span>
+                            </div>
+                         </div>
                      </div>
  
-                     <div class="skill-category-card animate-on-scroll pop-in delay-2">
-                         <h3><i class="fas fa-laptop-code"></i> Programming & Software Tools</h3>
-                         <ul class="skill-items-list">
-                             <li><span class="skill-tag-text">Languages:</span> <span class="lib-tag"><i class="fab fa-cuttlefish"></i> C (M)</span>, <span class="lib-tag"><i class="fab fa-cuttlefish"></i> C++</span>, <span class="lib-tag"><i class="fab fa-python"></i> Python (P)</span>, <span class="lib-tag">SQL</span>, <span class="lib-tag"><i class="fab fa-html5"></i> HTML</span>/<span class="lib-tag"><i class="fab fa-css3-alt"></i> CSS</span>, <span class="lib-tag">MATLAB</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-project-diagram"></i> Core Concepts:</span> Data Structures, OOP, Algorithms</li>
-                             <li><span class="skill-tag"><i class="fas fa-database"></i> Databases:</span> MySQL</li>
-                             <li><span class="skill-tag-text">Dev Tools:</span> <span class="lib-tag"><i class="fab fa-git-alt"></i> Git</span>, <span class="lib-tag"><i class="fab fa-github"></i> GitHub</span>, <span class="lib-tag">VS Code</span>, <span class="lib-tag"><i class="fab fa-python"></i> Jupyter</span></li>
-                             <li><span class="skill-tag-text">Simulation:</span> <span class="lib-tag">LTSpice</span>, <span class="lib-tag">TinkerCad</span>, <span class="lib-tag">Xilinx</span>, <span class="lib-tag">Logisim</span></li>
-                         </ul>
+                     <div class="skill-category-card animate-on-scroll pop-in-bouncy delay-2">
+                         <h3><i class="fas fa-tools skill-category-icon"></i> Programming & Software Tools</h3>
+                         <div class="skills-content-wrapper">
+                            <div class="skill-group-texted">
+                                 <strong>Languages:</strong> 
+                                 <span class="lib-tag lang"><i class="fab fa-cuttlefish"></i> C</span> 
+                                 <span class="lib-tag lang">C++</span> 
+                                 <span class="lib-tag lang"><i class="fab fa-python"></i> Python</span> 
+                                 <span class="lib-tag lang"><i class="fas fa-database"></i> SQL</span> 
+                                 <span class="lib-tag lang"><i class="fab fa-html5"></i> HTML</span>
+                                 <span class="lib-tag lang"><i class="fab fa-css3-alt"></i> CSS</span> 
+                                 <span class="lib-tag lang">MATLAB</span>
+                            </div>
+                             <div class="skill-tags-container">
+                                 <span class="skill-pill-tag blue"><i class="fas fa-project-diagram"></i> Core Concepts: DSA, OOPS</span>
+                                 <span class="skill-pill-tag blue"><i class=""></i> DBMS, OS, CN & IP</span>
+                                 <span class="skill-pill-tag blue"><i class="fas fa-database"></i> MySQL</span>
+                             </div>
+                             <div class="skill-group-texted">
+                                 <strong>Dev Tools:</strong> 
+                                 <span class="lib-tag tool"><i class="fab fa-git-alt"></i> Git</span> 
+                                 <span class="lib-tag tool"><i class="fab fa-github"></i> GitHub</span> 
+                                 <span class="lib-tag tool"><i class="fas fa-code"></i> Trae IDE</span> 
+                                 <span class="lib-tag tool"><i class="fab fa-python"></i> Google Colab</span>
+                             </div>
+                             <div class="skill-group-texted">
+                                 <strong>Simulation:</strong> 
+                                 <span class="lib-tag sim">LTSpice</span> 
+                                 <span class="lib-tag sim">TinkerCad</span> 
+                                 <span class="lib-tag sim">Xilinx</span> 
+                                 <span class="lib-tag sim">Logisim</span>
+                             </div>
+                         </div>
                      </div>
  
-                      <div class="skill-category-card animate-on-scroll pop-in delay-3">
-                         <h3><i class="fas fa-pencil-ruler"></i> Design, Documentation & Professional</h3>
-                         <ul class="skill-items-list">
-                             <li><span class="skill-tag"><i class="fas fa-palette"></i> Digital Design (Canva)</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-file-alt"></i> Technical Documentation & Reporting</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-users"></i> Leadership & Team Management</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-tasks"></i> Agile (Scrum Master) & Project Mgmt</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-lightbulb"></i> Innovation & Entrepreneurship</span></li>
-                             <li><span class="skill-tag"><i class="fas fa-comments"></i> Communication & Presentation</span></li>
-                         </ul>
+                      <div class="skill-category-card animate-on-scroll pop-in-bouncy delay-3">
+                         <h3><i class="fas fa-user-tie skill-category-icon"></i> Design, Documentation & Professional</h3> <!-- Changed icon -->
+                         <div class="skills-content-wrapper">
+                            <div class="skill-tags-container">
+                                 <span class="skill-pill-tag blue"><i class="fas fa-palette"></i> Digital Design (Canva)</span>
+                                 <span class="skill-pill-tag blue"><i class="fas fa-file-alt"></i> Technical Docs & Reporting</span>
+                                 <span class="skill-pill-tag blue"><i class="fas fa-users"></i> Leadership & Team Mgmt</span>
+                                 <span class="skill-pill-tag blue"><i class="fas fa-tasks"></i> Agile (Scrum Master) & Project Mgmt</span>
+                                 <span class="skill-pill-tag blue"><i class="fas fa-lightbulb"></i> Innovation & Entrepreneurship</span>
+                                 <span class="skill-pill-tag blue"><i class="fas fa-comments"></i> Communication & Presentation</span>
+                            </div>
+                         </div>
                      </div>
                  </div>
  
                  <h3 class="sub-section-title animate-on-scroll fade-in-up delay-1" style="margin-top: 50px;">Key .ipynb Project Highlights (ML & Data Focus)</h3>
                  <ul class="detailed-list ipynb-list stagger-children">
-                     <li class="animate-on-scroll pop-in stagger-item">
-                         <span class="ipynb-title"><i class="fas fa-image"></i> psp2_patch_specific_metrics.ipynb</span>
-                         <p class="ipynb-details">Metric evaluation for satellite image segmentation. Tech: Image Processing, CV Metrics. <a href="https://github.com/shaneVR097" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
-                     </li>
-                     <li class="animate-on-scroll pop-in stagger-item">
-                        <span class="ipynb-title"><i class="fas fa-satellite-dish"></i> SemanticEdgeDetection.ipynb </span>
-                        <p class="ipynb-details">Core PSPNet model work. Tech: Image Processing. <a href="https://github.com/shaneVR097" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+                    <li class="animate-on-scroll pop-in stagger-item">
+                        <span class="ipynb-title"><i class="fas fa-image"></i> psp2_patch_specific_metrics.ipynb</span>
+                        <p class="ipynb-details">Metric evaluation for satellite image segmentation. Tech: Image Processing, CV Metrics. <a href="https://colab.research.google.com/drive/1Bqb1t6dgaSu95e4qxqIgkfKZA_wo3OM7?usp=sharing" target="_blank" rel="noopener noreferrer">View on Google Colab</a></p>
+                    </li>
+                    <li class="animate-on-scroll pop-in stagger-item">
+                       <span class="ipynb-title"><i class="fas fa-satellite-dish"></i> SemanticEdgeDetection.ipynb (PSPNet Sat Img)</span>
+                       <p class="ipynb-details">Core PSPNet model work for satellite images. Tech: Image Processing. <a href="https://colab.research.google.com/drive/1WhmLRgleHvbPLpVAywyt3wGZU1PmmNcm?usp=sharing" target="_blank" rel="noopener noreferrer">View on Google Colab</a></p>
+                   </li>
+                    <li class="animate-on-scroll pop-in stagger-item">
+                        <span class="ipynb-title"><i class="fas fa-heartbeat"></i> HeartDiseasePredict.ipynb</span>
+                        <p class="ipynb-details">ML model for heart disease prediction. Tech: Scikit-learn, Pandas. <a href="https://github.com/shaneVR097" target="_blank" rel="noopener noreferrer">View on GitHub</a></p> 
+                    </li>
+                    <li class="animate-on-scroll pop-in stagger-item">
+                        <span class="ipynb-title"><i class="fas fa-car"></i> autompg_car.ipynb</span>
+                        <p class="ipynb-details">EDA & regression modeling for Auto MPG. Tech: Pandas, Matplotlib, Scikit-learn. <a href="https://colab.research.google.com/drive/1-wM_G190yle-ZGINIipvWAA01sg6mfa_?usp=sharing" target="_blank" rel="noopener noreferrer">View on Google Colab</a></p>
                     </li>
                      <li class="animate-on-scroll pop-in stagger-item">
-                         <span class="ipynb-title"><i class="fas fa-car"></i> autompg_car.ipynb</span>
-                         <p class="ipynb-details">EDA & regression modeling for Auto MPG. Tech: Pandas, Matplotlib, Scikit-learn. <a href="https://github.com/shaneVR097" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
-                     </li>
-                      <li class="animate-on-scroll pop-in stagger-item">
-                         <span class="ipynb-title"><i class="fas fa-notes-medical"></i> diabetes_missing_value_precproc.ipynb / Diabetes_sklearn.ipynb</span>
-                         <p class="ipynb-details">Data preprocessing (missing values) & predictive modeling for diabetes. Tech: Pandas, Scikit-learn. <a href="https://github.com/shaneVR097" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
-                     </li>
-                     <li class="animate-on-scroll pop-in stagger-item">
-                         <span class="ipynb-title"><i class="fas fa-home"></i> housepriceprediction.ipynb / <i class="fas fa-ship"></i> titanic.ipynb</span>
-                         <p class="ipynb-details">EDA, feature engineering & modeling for house price/Titanic survival. Tech: Pandas, Scikit-learn. <a href="https://github.com/shaneVR097" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
-                     </li>
+                        <span class="ipynb-title"><i class="fas fa-notes-medical"></i> diabetes_missing_value_precproc.ipynb / Diabetes_sklearn.ipynb</span>
+                        <p class="ipynb-details">Data preprocessing (missing values) & predictive modeling for diabetes. Tech: Pandas, Scikit-learn. <a href="https://colab.research.google.com/drive/1ebCeSuSqIU5XFqXC4InpGRjuU9GftWbp?usp=sharing" target="_blank" rel="noopener noreferrer">View Colab (Imputation)</a></p>
+                    </li>
+                    <li class="animate-on-scroll pop-in stagger-item">
+                        <span class="ipynb-title"><i class="fas fa-ship"></i> titanic.ipynb</span>
+                        <p class="ipynb-details">EDA, feature engineering & modeling for Titanic survival. Tech: Pandas, Scikit-learn. <a href="https://colab.research.google.com/drive/1nuo5QOIHtuT26bc5BHdqMoagLcrX5ebe?usp=sharing" target="_blank" rel="noopener noreferrer">View on Google Colab</a>
+                        </p>
+                    </li>
+                    <li class="animate-on-scroll pop-in stagger-item">
+                       <span class="ipynb-title"><i class="fas fa-home"></i> housepriceprediction.ipynb </span>
+                       <p class="ipynb-details">EDA, feature engineering & modeling for house price. Tech: Pandas, Scikit-learn. <a href="https://colab.research.google.com/drive/1-wvutXAQ-jsUcAeERUUlKLudk6PBaRS4?usp=sharing" target="_blank" rel="noopener noreferrer">View on Google Colab</a></p>
+                   </li>
+                   <li class="animate-on-scroll pop-in stagger-item">
+                       <span class="ipynb-title"><i class="fas fa-horse-head"></i> horse_or_human.ipynb</span>
+                       <p class="ipynb-details">Image classification for distinguishing horses from humans. Tech: Deep Learning (likely CNNs), TensorFlow/Keras. <a href="https://colab.research.google.com/drive/1UwZPiIyuH_h1frevNj-umUX6GQkMfz3V?usp=sharing" target="_blank" rel="noopener noreferrer">View Colab</a></p>
+                   </li>                    
                  </ul>
  
                   <h3 class="sub-section-title animate-on-scroll fade-in-up delay-1" style="margin-top: 50px;">Languages (Spoken)</h3>
@@ -868,7 +1085,7 @@
                   </div>
              </div>
          </section>
-
+         
         <section id="contact" class="content-section">
              <div class="container">
                 <h2 class="section-title animate-on-scroll fade-in-up">Get In Touch</h2>
@@ -895,6 +1112,7 @@
                 <div class="social-links animate-on-scroll fade-in-up delay-5">
                     <a href="https://www.linkedin.com/in/shyantan-kundu-1259a116b/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/shaneVR097" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <!-- Add other social links if needed -->
                 </div>
             </div>
         </section>
@@ -902,16 +1120,17 @@
 
     <footer class="site-footer-bottom">
         <div class="container">
-            <p>DOB: 31.03.2004 | Age: <span id="ageDisplay"></span> | Gender: Male | City of Residence: Kolkata, West Bengal, India</p>
-            <p>© <span id="currentYear"></span> Shyantan Kundu. All Rights Reserved.</p>
+            <p>DOB: 31.03.2004 | Age: <span id="ageDisplay">N/A</span> | Gender: Male | City of Residence: Kolkata, West Bengal, India</p>
+            <p>© <span id="currentYear">2024</span> Shyantan Kundu. All Rights Reserved.</p>
             <p>Crafted with <i class="fas fa-heart pulse"></i> and code.</p>
         </div>
     </footer>
     
-    <button id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top of page"><i class="fas fa-arrow-up"></i></button>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!-- Updated jQuery -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script> <!-- Updated Lightbox -->
     <script src="script2.js"></script>
 </body>
 </html>
