@@ -229,13 +229,66 @@ body.dark-mode .lb-data .lb-caption {
     color: #f8f9fa !important;
 }
 
-/* Font Families */
+/* Add this at the top of your CSS */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+/* Update :root variables */
 :root {
-    --font-primary: 'Poppins', sans-serif;
-    --font-heading-main: 'Orbitron', sans-serif; 
-    --font-heading-section: 'Exo 2', sans-serif; 
-    --font-heading-sub: 'Montserrat', sans-serif;
-    --font-code: 'Roboto Mono', monospace; 
+    --font-primary: 'Manrope', sans-serif; /* More modern body font */
+    --font-heading-main: 'Outfit', sans-serif; /* Clean tech-inspired headings */
+    --font-heading-section: 'Poppins', sans-serif; /* Retaining Poppins for sections */
+    --font-heading-sub: 'Outfit', sans-serif; /* Consistent with main headings */
+    --font-code: 'JetBrains Mono', monospace; /* Better programming font */
+}
+
+/* Adjust font weights throughout the design */
+body {
+    font-weight: 400; /* Medium weight for better readability */
+}
+
+h1 {
+    font-weight: 700; /* Bolder main headings */
+    letter-spacing: -0.5px; /* Tighter spacing for modern look */
+}
+
+h2.section-title {
+    font-weight: 600;
+    letter-spacing: -0.25px;
+}
+
+h3, h4 {
+    font-weight: 600; /* Consistent medium-bold weight */
+    letter-spacing: -0.15px;
+}
+
+/* Improve code readability */
+pre, code {
+    font-family: var(--font-code);
+    font-weight: 450; /* Medium weight for code */
+    font-size: 0.95em;
+}
+
+/* Enhance navigation readability */
+.nav-menu li a {
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+
+/* Better button typography */
+.cta-button, .project-link-btn {
+    font-weight: 600;
+    letter-spacing: 0.7px;
+}
+
+/* Timeline improvements */
+.timeline-content {
+    font-weight: 400;
+    line-height: 1.65; /* Better text density */
+}
+
+/* Skill tags refinement */
+.skill-pill-tag, .skill-sub-category-pill {
+    font-weight: 500;
 }
 
 /* Global Resets & Basic Styling */
